@@ -243,7 +243,9 @@ var SpotifyWebApi = (function () {
     var requestData = {
       url: _baseUri + '/me/tracks',
       type: 'PUT',
-      postData: trackIds
+      postData: {
+        ids: trackIds
+      }
     };
     return _checkParamsAndPerformRequest(requestData, options, callback);
   };
@@ -268,7 +270,9 @@ var SpotifyWebApi = (function () {
     var requestData = {
       url: _baseUri + '/me/tracks',
       type: 'DELETE',
-      postData: trackIds
+      postData: {
+        ids: trackIds
+      }
     };
     return _checkParamsAndPerformRequest(requestData, options, callback);
   };
